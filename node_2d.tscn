@@ -1,5 +1,51 @@
-[gd_scene format=3 uid="uid://btdjkcokr211v"]
+[gd_scene load_steps=7 format=3 uid="uid://btdjkcokr211v"]
+
+[ext_resource type="Texture2D" uid="uid://ce8d4bw1vt1bs" path="res://assets/Zombie/Basic Undead Animations/Dismembered Crawler/DismemberedCrawler.png" id="1_rs7yd"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4lncp"]
+atlas = ExtResource("1_rs7yd")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_igh0d"]
+atlas = ExtResource("1_rs7yd")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0x84a"]
+atlas = ExtResource("1_rs7yd")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wfacl"]
+atlas = ExtResource("1_rs7yd")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_y7kd0"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4lncp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_igh0d")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0x84a")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wfacl")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [node name="Node2D" type="Node2D"]
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D"]
+position = Vector2(3.8147e-06, -3.8147e-06)
+scale = Vector2(5, 5)
+sprite_frames = SubResource("SpriteFrames_y7kd0")
+frame_progress = 0.392078
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]

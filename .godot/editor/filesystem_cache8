@@ -1,4 +1,42 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1738949652
+::res://::1739555675
 icon.svg::CompressedTexture2D::5927127232214358750::1738855290::1738855300::1::::<><>::
-node_2d.tscn::PackedScene::3726766284103969049::1738949550::0::1::::<><>::
+node_2d.tscn::PackedScene::3726766284103969049::1739301618::0::1::::<><>::
+README.md::TextFile::-1::1738949773::0::1::::<><>::
+::res://assets/::1738951039
+::res://assets/Zombie/::1738951126
+::res://assets/Zombie/Basic Undead Animations/::1700076702
+::res://assets/Zombie/Basic Undead Animations/Bound Cadaver/::1738951323
+BoundCadaver.png::CompressedTexture2D::6539847109733767421::1699572238::1738951323::1::::<><>::
+::res://assets/Zombie/Basic Undead Animations/Brittle Archer/::1738951323
+BrittleArcher.png::CompressedTexture2D::2314481057197859272::1700066878::1738951323::1::::<><>::
+::res://assets/Zombie/Basic Undead Animations/Carcass Feeder/::1738951323
+CarcassFeeder.png::CompressedTexture2D::8521894028638358800::1699581510::1738951323::1::::<><>::
+::res://assets/Zombie/Basic Undead Animations/Decrepit Bones/::1738951323
+DecrepitBones.png::CompressedTexture2D::612223701875147841::1699582252::1738951323::1::::<><>::
+::res://assets/Zombie/Basic Undead Animations/Dismembered Crawler/::1738951323
+DismemberedCrawler.png::CompressedTexture2D::5121955234543053892::1699582988::1738951323::1::::<><>::
+::res://assets/Zombie/Basic Undead Animations/Ghastly Eye/::1738951323
+GhastlyEye.png::CompressedTexture2D::881195932923906231::1700000118::1738951323::1::::<><>::
+::res://assets/Zombie/Basic Undead Animations/Giant Royal Scarab/::1738951323
+GiantRoyalScarab.png::CompressedTexture2D::3721519849868127915::1700067066::1738951323::1::::<><>::
+::res://assets/Zombie/Basic Undead Animations/Grave Revenant/::1738951323
+GraveRevenant.png::CompressedTexture2D::8467233082049020440::1700001082::1738951323::1::::<><>::
+::res://assets/Zombie/Basic Undead Animations/Mutilated Stumbler/::1738951323
+MutilatedStumbler.png::CompressedTexture2D::740299447511373929::1700001292::1738951323::1::::<><>::
+::res://assets/Zombie/Basic Undead Animations/Royal Scarab/::1738951323
+RoyalScarab.png::CompressedTexture2D::5158240608030562354::1700002420::1738951323::1::::<><>::
+::res://assets/Zombie/Basic Undead Animations/Sand Ghoul/::1738951323
+SandGhoul.png::CompressedTexture2D::6754816331303887145::1700003490::1738951323::1::::<><>::
+::res://assets/Zombie/Basic Undead Animations/Skittering Hand/::1738951323
+SkitteringHand.png::CompressedTexture2D::7054289015201821943::1700004022::1738951323::1::::<><>::
+::res://assets/Zombie/Basic Undead Animations/Toxic Hound/::1738951323
+ToxicHound.png::CompressedTexture2D::7108728244683653809::1700004754::1738951323::1::::<><>::
+::res://assets/Zombie/Basic Undead Animations/Unraveling Crawler/::1738951323
+UnravelingCrawler.png::CompressedTexture2D::6312574860572254515::1700070130::1738951323::1::::<><>::
+::res://assets/Zombie/Basic Undead Animations/Vampire Bat/::1738951323
+VampireBat.png::CompressedTexture2D::2698439457996859372::1700005572::1738951323::1::::<><>::
+::res://assets/Zombie/Basic Undead Sprites/::1738951323
+Basic Undead 1x.png::CompressedTexture2D::2444623665293271578::1700076414::1738951323::1::::<><>::
+Basic Undead 2x.png::CompressedTexture2D::7291315369481547336::1700076428::1738951323::1::::<><>::
+Basic Undead 4x.png::CompressedTexture2D::8574713718183234769::1700076440::1738951323::1::::<><>::
