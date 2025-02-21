@@ -1,51 +1,183 @@
-[gd_scene load_steps=7 format=3 uid="uid://btdjkcokr211v"]
+[gd_scene load_steps=23 format=3 uid="uid://btdjkcokr211v"]
 
 [ext_resource type="Texture2D" uid="uid://ce8d4bw1vt1bs" path="res://assets/Zombie/Basic Undead Animations/Dismembered Crawler/DismemberedCrawler.png" id="1_rs7yd"]
+[ext_resource type="Texture2D" uid="uid://ba3guhmj6i6rm" path="res://assets/Zombie/Basic Undead Sprites/Basic Undead 1x.png" id="2_t1rqr"]
+[ext_resource type="Texture2D" uid="uid://ksuvhbsdn0dh" path="res://assets/Zombie/Basic Undead Animations/Mutilated Stumbler/MutilatedStumbler.png" id="3_awwa6"]
+[ext_resource type="Texture2D" uid="uid://dtocl5eggtpa3" path="res://assets/Zombie/Basic Undead Animations/Carcass Feeder/CarcassFeeder.png" id="4_w114u"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_4lncp"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_al22p"]
 atlas = ExtResource("1_rs7yd")
 region = Rect2(0, 0, 16, 16)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_igh0d"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_c0uub"]
 atlas = ExtResource("1_rs7yd")
 region = Rect2(16, 0, 16, 16)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_0x84a"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_3qptt"]
 atlas = ExtResource("1_rs7yd")
 region = Rect2(32, 0, 16, 16)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_wfacl"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_o4ies"]
 atlas = ExtResource("1_rs7yd")
 region = Rect2(48, 0, 16, 16)
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_y7kd0"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_l6flf"]
+atlas = ExtResource("2_t1rqr")
+region = Rect2(0, 36, 16, 18)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_o705r"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_4lncp")
+"texture": SubResource("AtlasTexture_al22p")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_igh0d")
+"texture": SubResource("AtlasTexture_c0uub")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_0x84a")
+"texture": SubResource("AtlasTexture_3qptt")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_wfacl")
+"texture": SubResource("AtlasTexture_o4ies")
+}],
+"loop": true,
+"name": &"moving",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l6flf")
+}],
+"loop": true,
+"name": &"new_animation",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fs3fa"]
+atlas = ExtResource("3_awwa6")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_76guo"]
+atlas = ExtResource("3_awwa6")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yq1g0"]
+atlas = ExtResource("3_awwa6")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mh04g"]
+atlas = ExtResource("3_awwa6")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s8bst"]
+atlas = ExtResource("2_t1rqr")
+region = Rect2(72, 36, 16, 18)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_bppti"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fs3fa")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_76guo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yq1g0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mh04g")
+}],
+"loop": true,
+"name": &"Moving",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s8bst")
 }],
 "loop": true,
 "name": &"default",
 "speed": 5.0
 }]
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_25sxt"]
+atlas = ExtResource("2_t1rqr")
+region = Rect2(19, 36, 17, 18)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k16mg"]
+atlas = ExtResource("4_w114u")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kkqxi"]
+atlas = ExtResource("4_w114u")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3x456"]
+atlas = ExtResource("4_w114u")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_11qfd"]
+atlas = ExtResource("4_w114u")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_7flxc"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_25sxt")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k16mg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kkqxi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3x456")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_11qfd")
+}],
+"loop": true,
+"name": &"new_animation",
+"speed": 5.0
+}]
+
 [node name="Node2D" type="Node2D"]
 
-[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+[node name="Crawler" type="CharacterBody2D" parent="."]
+position = Vector2(-39, -4)
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D"]
-position = Vector2(3.8147e-06, -3.8147e-06)
-scale = Vector2(5, 5)
-sprite_frames = SubResource("SpriteFrames_y7kd0")
-frame_progress = 0.392078
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Crawler"]
+scale = Vector2(1, 0.888889)
+sprite_frames = SubResource("SpriteFrames_o705r")
+animation = &"moving"
+frame_progress = 0.825274
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Crawler"]
+
+[node name="Zombie" type="CharacterBody2D" parent="."]
+position = Vector2(-79, 0)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Zombie"]
+sprite_frames = SubResource("SpriteFrames_bppti")
+animation = &"Moving"
+frame_progress = 0.647592
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Zombie"]
+
+[node name="DRAKE" type="CharacterBody2D" parent="."]
+position = Vector2(28, 0)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="DRAKE"]
+sprite_frames = SubResource("SpriteFrames_7flxc")
+animation = &"new_animation"
+frame_progress = 0.476164
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DRAKE"]
