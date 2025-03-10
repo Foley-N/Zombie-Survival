@@ -1,28 +1,30 @@
-[gd_scene load_steps=23 format=3 uid="uid://btdjkcokr211v"]
+[gd_scene load_steps=28 format=3 uid="uid://btdjkcokr211v"]
 
-[ext_resource type="Texture2D" uid="uid://ce8d4bw1vt1bs" path="res://assets/Zombie/Basic Undead Animations/Dismembered Crawler/DismemberedCrawler.png" id="1_rs7yd"]
-[ext_resource type="Texture2D" uid="uid://ba3guhmj6i6rm" path="res://assets/Zombie/Basic Undead Sprites/Basic Undead 1x.png" id="2_t1rqr"]
-[ext_resource type="Texture2D" uid="uid://ksuvhbsdn0dh" path="res://assets/Zombie/Basic Undead Animations/Mutilated Stumbler/MutilatedStumbler.png" id="3_awwa6"]
-[ext_resource type="Texture2D" uid="uid://dtocl5eggtpa3" path="res://assets/Zombie/Basic Undead Animations/Carcass Feeder/CarcassFeeder.png" id="4_w114u"]
+[ext_resource type="Script" path="res://crawler.gd" id="1_7bm64"]
+[ext_resource type="Texture2D" uid="uid://ce8d4bw1vt1bs" path="res://assets/Zombie/Basic Undead Animations/Dismembered Crawler/DismemberedCrawler.png" id="2_nehtf"]
+[ext_resource type="Texture2D" uid="uid://ba3guhmj6i6rm" path="res://assets/Zombie/Basic Undead Sprites/Basic Undead 1x.png" id="3_mgt6l"]
+[ext_resource type="Texture2D" uid="uid://ksuvhbsdn0dh" path="res://assets/Zombie/Basic Undead Animations/Mutilated Stumbler/MutilatedStumbler.png" id="4_vxw1j"]
+[ext_resource type="Script" path="res://drake.gd" id="5_dijlo"]
+[ext_resource type="Texture2D" uid="uid://dtocl5eggtpa3" path="res://assets/Zombie/Basic Undead Animations/Carcass Feeder/CarcassFeeder.png" id="6_jm826"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_al22p"]
-atlas = ExtResource("1_rs7yd")
+atlas = ExtResource("2_nehtf")
 region = Rect2(0, 0, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_c0uub"]
-atlas = ExtResource("1_rs7yd")
+atlas = ExtResource("2_nehtf")
 region = Rect2(16, 0, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_3qptt"]
-atlas = ExtResource("1_rs7yd")
+atlas = ExtResource("2_nehtf")
 region = Rect2(32, 0, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_o4ies"]
-atlas = ExtResource("1_rs7yd")
+atlas = ExtResource("2_nehtf")
 region = Rect2(48, 0, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_l6flf"]
-atlas = ExtResource("2_t1rqr")
+atlas = ExtResource("3_mgt6l")
 region = Rect2(0, 36, 16, 18)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_o705r"]
@@ -53,24 +55,28 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_1jgjt"]
+radius = 8.0
+height = 32.0
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_fs3fa"]
-atlas = ExtResource("3_awwa6")
+atlas = ExtResource("4_vxw1j")
 region = Rect2(0, 0, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_76guo"]
-atlas = ExtResource("3_awwa6")
+atlas = ExtResource("4_vxw1j")
 region = Rect2(16, 0, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_yq1g0"]
-atlas = ExtResource("3_awwa6")
+atlas = ExtResource("4_vxw1j")
 region = Rect2(32, 0, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_mh04g"]
-atlas = ExtResource("3_awwa6")
+atlas = ExtResource("4_vxw1j")
 region = Rect2(48, 0, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_s8bst"]
-atlas = ExtResource("2_t1rqr")
+atlas = ExtResource("3_mgt6l")
 region = Rect2(72, 36, 16, 18)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_bppti"]
@@ -101,24 +107,28 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_e36yl"]
+radius = 48.0
+height = 264.0
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_25sxt"]
-atlas = ExtResource("2_t1rqr")
+atlas = ExtResource("3_mgt6l")
 region = Rect2(19, 36, 17, 18)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_k16mg"]
-atlas = ExtResource("4_w114u")
+atlas = ExtResource("6_jm826")
 region = Rect2(0, 0, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_kkqxi"]
-atlas = ExtResource("4_w114u")
+atlas = ExtResource("6_jm826")
 region = Rect2(16, 0, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_3x456"]
-atlas = ExtResource("4_w114u")
+atlas = ExtResource("6_jm826")
 region = Rect2(32, 0, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_11qfd"]
-atlas = ExtResource("4_w114u")
+atlas = ExtResource("6_jm826")
 region = Rect2(48, 0, 16, 16)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_7flxc"]
@@ -149,35 +159,62 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_5po24"]
+radius = 16.0
+height = 47.9999
+
 [node name="Node2D" type="Node2D"]
 
 [node name="Crawler" type="CharacterBody2D" parent="."]
-position = Vector2(-39, -4)
+position = Vector2(293, 24)
+script = ExtResource("1_7bm64")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Crawler"]
-scale = Vector2(1, 0.888889)
+position = Vector2(-0.5, -0.555555)
+scale = Vector2(1.9375, 1.69444)
 sprite_frames = SubResource("SpriteFrames_o705r")
 animation = &"moving"
-frame_progress = 0.825274
+frame_progress = 0.481624
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Crawler"]
+position = Vector2(0, 7)
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_1jgjt")
 
 [node name="Zombie" type="CharacterBody2D" parent="."]
-position = Vector2(-79, 0)
+position = Vector2(147, 99)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Zombie"]
+position = Vector2(-1.25, -2)
+scale = Vector2(7.78125, 8.25)
 sprite_frames = SubResource("SpriteFrames_bppti")
 animation = &"Moving"
-frame_progress = 0.647592
+frame = 2
+frame_progress = 0.541431
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Zombie"]
+position = Vector2(-6, 1)
+scale = Vector2(0.5, 0.5)
+shape = SubResource("CapsuleShape2D_e36yl")
 
 [node name="DRAKE" type="CharacterBody2D" parent="."]
-position = Vector2(28, 0)
+position = Vector2(218, 57)
+script = ExtResource("5_dijlo")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="DRAKE"]
+position = Vector2(0, -4.76837e-07)
+scale = Vector2(1.75, 1.5)
 sprite_frames = SubResource("SpriteFrames_7flxc")
 animation = &"new_animation"
-frame_progress = 0.476164
+frame_progress = 0.132499
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DRAKE"]
+position = Vector2(0, 5)
+rotation = 1.5708
+scale = Vector2(0.5, 0.5)
+shape = SubResource("CapsuleShape2D_5po24")
+
+[node name="Player" type="CharacterBody2D" parent="."]
+position = Vector2(272, 80)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]

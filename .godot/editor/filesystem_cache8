@@ -1,8 +1,11 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1740158415
+::res://::1741625038
 icon.svg::CompressedTexture2D::5927127232214358750::1738855290::1738855300::1::::<><>::
-node_2d.tscn::PackedScene::3726766284103969049::1740076479::0::1::::<><>::uid://db475tc3eae8w::::res://assets/Zombie/Basic Undead Sprites/Basic Undead 2x.png<>uid://ce8d4bw1vt1bs::::res://assets/Zombie/Basic Undead Animations/Dismembered Crawler/DismemberedCrawler.png
+node_2d.tscn::PackedScene::3726766284103969049::1741624933::0::1::::<><>::res://crawler.gd<>uid://ce8d4bw1vt1bs::::res://assets/Zombie/Basic Undead Animations/Dismembered Crawler/DismemberedCrawler.png<>uid://ba3guhmj6i6rm::::res://assets/Zombie/Basic Undead Sprites/Basic Undead 1x.png<>uid://ksuvhbsdn0dh::::res://assets/Zombie/Basic Undead Animations/Mutilated Stumbler/MutilatedStumbler.png<>uid://dtocl5eggtpa3::::res://assets/Zombie/Basic Undead Animations/Carcass Feeder/CarcassFeeder.png
 README.md::TextFile::-1::1738949773::0::1::::<><>::
+crawler.gd::GDScript::-1::1741623503::0::1::::<>CharacterBody2D<>::
+drake.gd::GDScript::-1::1741625038::0::1::::<>CharacterBody2D<>::
+zombie.gd::GDScript::-1::1741623329::0::1::::<>CharacterBody2D<>::
 ::res://assets/::1738951039
 ::res://assets/Zombie/::1738951126
 ::res://assets/Zombie/Basic Undead Animations/::1700076702
