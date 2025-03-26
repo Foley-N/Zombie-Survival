@@ -1,0 +1,58 @@
+[gd_scene load_steps=8 format=3 uid="uid://cmjqclb3ed6vb"]
+
+[ext_resource type="Texture2D" uid="uid://tfj0skoh825c" path="res://assets/Player/Merfolk Aquamancer/MerfolkAquamancer.png" id="1_oaq0o"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5o0qm"]
+atlas = ExtResource("1_oaq0o")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ylcpg"]
+atlas = ExtResource("1_oaq0o")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i2j0x"]
+atlas = ExtResource("1_oaq0o")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pmnm2"]
+atlas = ExtResource("1_oaq0o")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_6dk1s"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5o0qm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ylcpg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i2j0x")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pmnm2")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_vbd8n"]
+radius = 21.0
+height = 46.0
+
+[node name="Node2D" type="Node2D"]
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+position = Vector2(-30, 31)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D"]
+position = Vector2(-14, -1.5)
+scale = Vector2(2.875, 2.9375)
+sprite_frames = SubResource("SpriteFrames_6dk1s")
+frame_progress = 0.148012
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+position = Vector2(-12, 0)
+shape = SubResource("CapsuleShape2D_vbd8n")
