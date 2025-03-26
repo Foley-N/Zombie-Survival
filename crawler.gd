@@ -21,7 +21,7 @@ func _ready():
 	randomnum = rng.randf()
 	
 	# Get player reference (adjust path according to your scene structure)
-	player = get_tree().get_first_node_in_group("player")
+	player = get_tree()
 	if not player:
 		printerr("Player not found!")
 
@@ -44,7 +44,7 @@ func move(target, delta):
 	var desired_velocity = direction * speed
 	var steering = (desired_velocity - velocity) * delta * 2.5
 	velocity += steering
-	#velocity = move_and_slide(velocity)
+	move_and_slide()
 
 func get_circle_position(random):
 	var radius = 40

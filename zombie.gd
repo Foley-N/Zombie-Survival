@@ -44,7 +44,7 @@ func move(target, delta):
 	var desired_velocity = direction * speed
 	var steering = (desired_velocity - velocity) * delta * 2.5
 	velocity += steering
-	velocity = move_and_slide(velocity)
+	velocity = move_and_slide()
 
 func get_circle_position(random):
 	var radius = 40

@@ -4,7 +4,6 @@
 [ext_resource type="Texture2D" uid="uid://ce8d4bw1vt1bs" path="res://assets/Zombie/Basic Undead Animations/Dismembered Crawler/DismemberedCrawler.png" id="2_nehtf"]
 [ext_resource type="Texture2D" uid="uid://ba3guhmj6i6rm" path="res://assets/Zombie/Basic Undead Sprites/Basic Undead 1x.png" id="3_mgt6l"]
 [ext_resource type="Texture2D" uid="uid://ksuvhbsdn0dh" path="res://assets/Zombie/Basic Undead Animations/Mutilated Stumbler/MutilatedStumbler.png" id="4_vxw1j"]
-[ext_resource type="Script" path="res://drake.gd" id="5_dijlo"]
 [ext_resource type="Texture2D" uid="uid://dtocl5eggtpa3" path="res://assets/Zombie/Basic Undead Animations/Carcass Feeder/CarcassFeeder.png" id="6_jm826"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_al22p"]
@@ -56,8 +55,8 @@ animations = [{
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_1jgjt"]
-radius = 8.0
-height = 32.0
+radius = 11.0
+height = 54.0
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_fs3fa"]
 atlas = ExtResource("4_vxw1j")
@@ -108,8 +107,8 @@ animations = [{
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_e36yl"]
-radius = 48.0
-height = 264.0
+radius = 32.9324
+height = 97.0907
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_25sxt"]
 atlas = ExtResource("3_mgt6l")
@@ -160,61 +159,64 @@ animations = [{
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_5po24"]
-radius = 16.0
-height = 47.9999
+radius = 28.0
+height = 95.9999
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_t8ex2"]
 
 [node name="Node2D" type="Node2D"]
 
 [node name="Crawler" type="CharacterBody2D" parent="."]
-position = Vector2(293, 24)
+position = Vector2(155, 174)
 script = ExtResource("1_7bm64")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Crawler"]
-position = Vector2(-0.5, -0.555555)
-scale = Vector2(1.9375, 1.69444)
+position = Vector2(-3.00001, -6.00001)
+scale = Vector2(3, 3)
 sprite_frames = SubResource("SpriteFrames_o705r")
 animation = &"moving"
 frame_progress = 0.481624
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Crawler"]
-position = Vector2(0, 7)
+position = Vector2(-2, 8)
 rotation = 1.5708
 shape = SubResource("CapsuleShape2D_1jgjt")
 
 [node name="Zombie" type="CharacterBody2D" parent="."]
-position = Vector2(147, 99)
+position = Vector2(144, 128)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Zombie"]
-position = Vector2(-1.25, -2)
-scale = Vector2(7.78125, 8.25)
+position = Vector2(-60.7669, 3.63634)
+scale = Vector2(3.02914, 3.04546)
 sprite_frames = SubResource("SpriteFrames_bppti")
 animation = &"Moving"
 frame = 2
 frame_progress = 0.541431
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Zombie"]
-position = Vector2(-6, 1)
+position = Vector2(-62, 5)
 scale = Vector2(0.5, 0.5)
 shape = SubResource("CapsuleShape2D_e36yl")
 
 [node name="DRAKE" type="CharacterBody2D" parent="."]
-position = Vector2(218, 57)
-script = ExtResource("5_dijlo")
+position = Vector2(224, 95)
+slide_on_ceiling = false
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="DRAKE"]
-position = Vector2(0, -4.76837e-07)
-scale = Vector2(1.75, 1.5)
+position = Vector2(1, 9.5)
+scale = Vector2(3, 2.9375)
 sprite_frames = SubResource("SpriteFrames_7flxc")
 animation = &"new_animation"
 frame_progress = 0.132499
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DRAKE"]
-position = Vector2(0, 5)
+position = Vector2(1, 21)
 rotation = 1.5708
 scale = Vector2(0.5, 0.5)
 shape = SubResource("CapsuleShape2D_5po24")
 
-[node name="Player" type="CharacterBody2D" parent="."]
-position = Vector2(272, 80)
+[node name="player" type="CharacterBody2D" parent="."]
+position = Vector2(296, 160)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="player"]
+shape = SubResource("CircleShape2D_t8ex2")
