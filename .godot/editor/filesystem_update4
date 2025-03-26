@@ -1,1 +1,3 @@
-res://player.tscn
+res://assets/player.tscn
+res://assets/Player.gd
+res://node_2d.tscn
